@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "arbite - Your career co-pilot",
+    "description": "Use the power of automation to find and apply for the jobs you like",
+    "version": "1.0",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "arbite.png"
+    }
+  }
