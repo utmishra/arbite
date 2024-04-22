@@ -1,22 +1,20 @@
 {
-    "manifest_version": 3,
-    "name": "arbite - Your career co-pilot",
-    "description": "Use the power of automation to find and apply for the jobs you like",
-    "version": "1.0",
-    "permissions": ["activeTab", "tabs"],
-    "action": {
-      "default_popup": "index.html",
-      "default_icon": "arbite.png"
-    },
-    "background": {
-      "service_worker": "dist/background.js"
-    },
-    "content_scripts": [
-      {
-        "js": ["dist/index.js"],
-        "matches": [
-          "https://*.linkedin.com//"
-        ]
-      }
-    ]
-  }
+  "manifest_version": 3,
+  "name": "arbite - Your career co-pilot",
+  "description": "Use the power of automation to find and apply for the jobs you like",
+  "version": "1.0",
+  "permissions": ["activeTab", "tabs"],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "arbite.png"
+  },
+  "background": {
+    "service_worker": "dist/src/service-worker/background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["dist/src/content-scripts/linkedin.js"],
+      "matches": ["https://*.linkedin.com//"]
+    }
+  ]
+}
