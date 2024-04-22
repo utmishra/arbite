@@ -1,1 +1,1 @@
-console.log('arbite is active now!');
+console.log('Testing sonarlint');
