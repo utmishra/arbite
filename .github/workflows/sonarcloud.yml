@@ -22,6 +22,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args:
-            -Dsonar.projectKey=arbite
-            -Dsonar.organization=utmishra
+            -Dsonar.projectKey= ${{ secrets.SONAR_CLOUD_PROJECT_ID }}
+            -Dsonar.organization= ${{ secrets.SONAR_CLOUD_ORGANIZATION_ID }}
             -Dsonar.sources:src
