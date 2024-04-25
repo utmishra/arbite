@@ -1,21 +1,7 @@
-import typescriptEsLint from '@typescript-eslint/eslint-plugin'
-import parserTypeScript from '@typescript-eslint/parser'
-import eslintPluginPrettierRecommended from 'eslint-config-prettier'
+import eslint from '@eslint/js'
+import tseslint from 'typescript-eslint'
 
-export default [
-  {
-    name: 'eslint-ts',
-    files: ['src/**/*.ts'],
-    languageOptions: {
-      parser: parserTypeScript,
-    },
-    plugins: {
-      '@typescript-eslint': typescriptEsLint,
-    },
-    rules: {
-      '@typescript-eslint/no-unused-vars': 'error',
-      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    },
-  },
-  eslintPluginPrettierRecommended,
-]
+export default tseslint.config(
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
+)
