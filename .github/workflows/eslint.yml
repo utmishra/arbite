@@ -32,7 +32,7 @@ jobs:
         uses: oven-sh/setup-bun@v1.2.1
 
       - name: Install packages
-        run: bunx install
+        run: bun install
 
       - name: Run ESLint
         run: bunx eslint .
