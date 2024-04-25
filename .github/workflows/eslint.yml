@@ -31,10 +31,8 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1.2.1
 
-      - name: Install eslint
-        run: |
-          npm install eslint@9.1.0
-          npm install @microsoft/eslint-formatter-sarif@3.1.0
+      - name: Install packages
+        run: bunx install
 
       - name: Run ESLint
         run: bunx eslint .
