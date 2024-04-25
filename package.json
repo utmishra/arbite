@@ -3,29 +3,26 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
+  "type": "module",
   "scripts": {
-<<<<<<< Updated upstream
-    "dev": "bun build --watch src/*.ts --outdir dist/",
-    "test": "echo \"Error: no test specified\" && exit 1"
-=======
     "dev": "bun build --watch index.ts src/**/*.ts --outdir dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
     "lint": "npx eslint 'src/**/*.ts'"
->>>>>>> Stashed changes
   },
   "author": "Utkarsh Mishra",
   "license": "ISC",
   "devDependencies": {
-    "@types/bun": "^1.0.12"
+    "@types/bun": "latest",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-<<<<<<< Updated upstream
-    "@types/chrome": "^0.0.265"
-=======
     "@eslint/js": "^9.1.1",
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@types/chrome": "^0.0.265",
@@ -34,6 +31,5 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
->>>>>>> Stashed changes
   }
 }

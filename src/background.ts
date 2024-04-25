@@ -1,1 +1,1 @@
-console.log('Background operation is active');
+console.log('Background operation is active')

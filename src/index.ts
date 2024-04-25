@@ -1,1 +1,1 @@
-console.log('Build via bun');
+console.log('Build via bun')
